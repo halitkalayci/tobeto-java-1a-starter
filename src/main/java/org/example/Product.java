@@ -9,6 +9,12 @@ public class Product {
     // public => tüm dış noktalardan erişime açık
     // private => sadece class içinden erişilebilir
     // ...
+
+    public Product()
+    {
+        System.out.println("Yeni bir ürün üretildi..");
+    }
+
     public String name;
     public double unitPrice;
 

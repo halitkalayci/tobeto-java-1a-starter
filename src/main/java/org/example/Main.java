@@ -143,5 +143,9 @@ public class Main {
                 " Ürün fiyatı: " +
                 instance1.unitPrice);
 
+
+        // construct
+        // constructor => yapıcı method
+        Product product = new Product();
     }
 }
