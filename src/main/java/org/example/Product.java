@@ -24,9 +24,36 @@ public class Product {
     {
         System.out.println("Yeni bir ürün üretildi..");
     }
-    // 11:00
-    public String name;
-    public double unitPrice;
+
+    // Attributelar
+    private String name;
+    private double unitPrice;
+
+
+    // getter-setter
+    // okuma-yazma
+
+    // sadece getter'i olan attributelar => read-only
+    // sadece setteri olan => write-only
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        if(name.length() < 3)
+            return;
+        this.name = name;
+    }
+
+    public double getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(double unitPrice) {
+        this.unitPrice = unitPrice;
+    }
 
     // void => geriye değer dönmeyem method türü
     // double
@@ -35,4 +62,7 @@ public class Product {
         unitPrice = unitPrice - priceToSubstract;
         System.out.println(name + " ürününe " + priceToSubstract + "₺ kadar indirim yapılmıştır.");
     }
+
+    // Method Overloading => Aynı isime farklı imza ve scope'a sahip metotlar.
+
 }

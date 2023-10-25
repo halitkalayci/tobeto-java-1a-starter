@@ -130,18 +130,18 @@ public class Main {
 
         // n adet instance => örnek
         Product instance1 = new Product();
-        instance1.name = "Laptop";
-        instance1.unitPrice= 5000;
+        instance1.setName("Laptop");
+        instance1.setUnitPrice(5000);
         instance1.applyDiscount(10);
         // instance
         Product instance2 = new Product();
-        instance2.name="Mouse";
-        instance2.unitPrice=200;
+        instance2.setName("Mouse");
+        instance2.setUnitPrice(200);
 
         System.out.println("Ürün Adı: " +
-                instance1.name +
+                instance1.getName() +
                 " Ürün fiyatı: " +
-                instance1.unitPrice);
+                instance1.getUnitPrice());
 
 
         // construct
@@ -149,6 +149,6 @@ public class Main {
         Product product  = new Product();
         Product product1 = new Product("Deneme");
         Product product2 = new Product("Deneme 2", 500);
-        System.out.println(product2.name);
+        System.out.println(product2.getName());
     }
 }
