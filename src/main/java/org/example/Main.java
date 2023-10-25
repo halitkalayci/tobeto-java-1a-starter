@@ -126,6 +126,21 @@ public class Main {
         {
             System.out.println(number);
         }
+        // OOP
+
+        // n adet instance => örnek
+        Product instance1 = new Product();
+        instance1.name = "Laptop";
+        instance1.unitPrice= 5000;
+        // instance
+        Product instance2 = new Product();
+        instance2.name="Mouse";
+        instance2.unitPrice=200;
+
+        System.out.println("Ürün Adı: " +
+                instance1.name +
+                " Ürün fiyatı: " +
+                instance1.unitPrice);
 
     }
 }
