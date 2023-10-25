@@ -146,6 +146,9 @@ public class Main {
 
         // construct
         // constructor => yapıcı method
-        Product product = new Product();
+        Product product  = new Product();
+        Product product1 = new Product("Deneme");
+        Product product2 = new Product("Deneme 2", 500);
+        System.out.println(product2.name);
     }
 }

@@ -10,11 +10,21 @@ public class Product {
     // private => sadece class içinden erişilebilir
     // ...
 
+    public Product(String name, double unitPrice)
+    {
+        // this => classın kendisi
+        this.name = name;
+        this.unitPrice = unitPrice;
+    }
+    public Product(String name)
+    {
+        this.name = name;
+    }
     public Product()
     {
         System.out.println("Yeni bir ürün üretildi..");
     }
-
+    // 11:00
     public String name;
     public double unitPrice;
 
