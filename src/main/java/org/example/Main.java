@@ -132,6 +132,7 @@ public class Main {
         Product instance1 = new Product();
         instance1.name = "Laptop";
         instance1.unitPrice= 5000;
+        instance1.applyDiscount(10);
         // instance
         Product instance2 = new Product();
         instance2.name="Mouse";
