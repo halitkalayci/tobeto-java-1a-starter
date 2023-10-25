@@ -1,5 +1,8 @@
 package org.example;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -81,6 +84,48 @@ public class Main {
             System.out.println("Kayıt olamaz.");
         }
 
+        String[] nameArray = { "Halit","Melisa","Halil","Rıdvan" };
+        // nameArray @abc
+
+        String[] array2 = nameArray;
+        // array2 @abc
+
+        // @abc[0] = "Enes"
+        array2[0] = "Enes";
+
+        // iterasyon => tekrar
+
+        // Stack, Heap
+
+        // Primitive Type => boolean,integer,long,byte => Stack
+        // a => 10, b=>true
+
+
+        // Reference Type => class,interface,Array
+        // Stack complex objeleri barındaramıyor.
+
+        String[] array3 = Arrays.copyOf(nameArray, nameArray.length);
+        System.out.println(nameArray);
+        System.out.println(array3);
+
+        array3[0]="Vedat";
+        for (int i = 0; i < array3.length; i++) {
+            System.out.println(array3[i]);
+        }
+        System.out.println("************");
+        for (int i = 0; i < nameArray.length; i++) {
+            System.out.println(nameArray[i]);
+        }
+
+
+        Integer[] numbers = {1,2,3,4};
+
+        Integer[] copyNumbers = Arrays.copyOf(numbers, numbers.length);
+
+        for(Integer number:numbers)
+        {
+            System.out.println(number);
+        }
 
     }
 }
