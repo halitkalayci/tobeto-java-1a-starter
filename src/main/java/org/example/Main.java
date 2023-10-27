@@ -1,7 +1,21 @@
 package org.example;
 
+// Built-in Packages
 import java.util.Arrays;
-import java.util.List;
+
+
+// User Defined Packages
+// Paketten sadece example'ı import eder
+//import org.example.models.Example;
+// All
+// Paketteki tüm tanımlamaları import eder.
+import org.example.inheritance.Animal;
+import org.example.inheritance.Bird;
+import org.example.inheritance.Dog;
+import org.example.models.*;
+
+// Dependencies => Projenin bağımlılıkları
+import lombok.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -150,5 +164,22 @@ public class Main {
         Product product1 = new Product("Deneme");
         Product product2 = new Product("Deneme 2", 500);
         System.out.println(product2.getName());
+
+        // Packages
+        // Import etmeden kullanılamaz. Çünkü farklı pakette.
+        Example example = new Example();
+        Sample sample = new Sample();
+
+
+        // Inheritance => Kalıtım,Miras
+
+        // SuperClass
+        Animal animal = new Animal();
+
+        // Subclasses
+        Bird bird = new Bird();
+        Dog dog = new Dog();
+
+
     }
 }
