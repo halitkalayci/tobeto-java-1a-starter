@@ -185,14 +185,14 @@ public class Main {
 
         dog.breathe();
         dog.animalSound();
-
+        //Animal animal1 = new Animal();
         Animal animal = new Bird();
         Animal animal2 = new Dog();
 
         flyExternal(animal);
         flyExternal(animal2);
     }
-
+    // 11:05
     public static void flyExternal(Animal animal){
         if(animal instanceof Bird){ // Animal bir bird türü mü
             Bird bird = (Bird)animal;
