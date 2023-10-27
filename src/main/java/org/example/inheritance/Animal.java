@@ -1,6 +1,8 @@
 package org.example.inheritance;
 
-public class Animal {
+public abstract class Animal {
+    // Animal classından türetiliyor ise o class bu methodu somut hale getirmek zorundadır..
+    public abstract void animalSound();
     public void eat(){
         System.out.println("Animal is eating..");
     }

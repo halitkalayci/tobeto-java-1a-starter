@@ -174,12 +174,16 @@ public class Main {
         // Inheritance => Kalıtım,Miras
 
         // SuperClass
-        Animal animal = new Animal();
-
+        //Animal animal = new Animal();
         // Subclasses
         Bird bird = new Bird();
         Dog dog = new Dog();
 
+        //animal.breathe();
+        bird.breathe();
+        bird.animalSound();
 
+        dog.breathe();
+        dog.animalSound();
     }
 }
