@@ -185,5 +185,22 @@ public class Main {
 
         dog.breathe();
         dog.animalSound();
+
+        Animal animal = new Bird();
+        Animal animal2 = new Dog();
+
+        flyExternal(animal);
+        flyExternal(animal2);
+    }
+
+    public static void flyExternal(Animal animal){
+        if(animal instanceof Bird){ // Animal bir bird türü mü
+            Bird bird = (Bird)animal;
+            bird.fly();
+        }
+        if(animal instanceof Dog){
+            Dog dog = (Dog) animal;
+            dog.walk();
+        }
     }
 }

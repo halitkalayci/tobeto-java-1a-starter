@@ -9,4 +9,8 @@ public class Dog extends Animal {
         System.out.println("Hav hav..");
         //super.animalSound();
     }
+
+    public void walk(){
+        System.out.println("Dog is walking");
+    }
 }
