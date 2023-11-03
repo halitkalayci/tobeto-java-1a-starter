@@ -1,8 +1,7 @@
 package org.example.lambda;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.text.Collator;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -53,6 +52,8 @@ public class Main {
         users.add(new User(1,"Halit","Kalaycı",25)); // 1,2 - 1,3
         users.add(new User(2,"Engin","Demiroğ",30)); // 2-3
         users.add(new User(3,"İrem","Balcı",16));
+        users.add(new User(4,"Erdi","Öğretmen",16));
+        users.add(new User(5,"Rıdvan","Zeki",16));
 
         List<User> users2 = users
                 .stream()
@@ -76,5 +77,15 @@ public class Main {
                 .sorted((user1,user2) -> Integer.compare(user1.getAge(),user2.getAge()))
                 .toList();
         sortedUsers.forEach((u) -> System.out.println(u.getName()));
+        System.out.println("*********** SURNAME **********");
+
+        Collator collator = Collator.getInstance(new Locale("tr","TR"));
+
+        List<User> sortedUsers2 = users
+                .stream()
+                // ClassIsmi::fonksiyonIsmi => fonksiyon referansı transferi
+                .sorted(Comparator.comparing(User::getSurname, collator))
+                .toList();
+        sortedUsers2.forEach((u) -> System.out.println(u.getName()));
     }
 }
